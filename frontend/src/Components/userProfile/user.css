@@ -1,0 +1,14 @@
+.profile-container {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .btn-logout {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  

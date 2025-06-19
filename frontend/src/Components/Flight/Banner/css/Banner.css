@@ -1,0 +1,93 @@
+/* src/components/AdBanner.css */
+
+.ad-banner-container {
+ 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures videos are on opposite sides */
+  padding: 20px auto; /* Increased padding to allow more space */
+  overflow: hidden;
+  width: 100%; /* Ensure it takes full width of its parent */
+
+}
+
+.ad-left, .ad-center, .ad-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ad-logo {
+  width: 100px;
+  height: auto;
+}
+
+.ad-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: gold;
+}
+
+.ad-warranty-badge {
+  background-color: #fff;
+  color: #7a0044;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-circle {
+  background: gold;
+  color: #000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.warranty-text {
+  font-size: 16px;
+}
+
+.ad-video {
+  width: 500px; /* Adjusted width for videos */
+  height: 200px; /* Height remains same */
+  object-fit: contain;
+  border-radius: 12px;
+  margin-top: 5px;
+}
+
+.ad-left {
+  justify-content: flex-start; /* Align the left video to the left side */
+  margin-left: -50px;
+}
+
+.ad-right {
+  justify-content: flex-end; /* Align the right video to the right side */
+  margin-right: -50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ad-banner-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .ad-video {
+    width: 100%; /* Make video responsive */
+    height: auto;
+  }
+}

@@ -1,0 +1,185 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    padding: 15px 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.plane-icon {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for logo */
+.logo:hover .plane-icon {
+    transform: rotate(-20deg);
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+/* Underline animation */
+.nav-links a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #ffdd57;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Menu for Services */
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-toggle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+    padding: 5px;
+}
+
+.dropdown-toggle:hover {
+    color: #ffdd57;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Dropdown menu items */
+.dropdown-menu li {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Dropdown Icons */
+.dropdown-icon {
+    font-size: 1.2rem;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+    background: #007bff;
+}
+
+.dropdown-menu li:hover a {
+    color: white;
+}
+
+.dropdown-menu li:hover .dropdown-icon {
+    color: white;
+}
+
+/* Login Section */
+.login-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-icon {
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-text {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Hover effect for login */
+.login-section:hover {
+    transform: scale(1.1);
+    color: #ffdd57;
+}
+
+.login-section:hover .login-icon {
+    transform: rotate(360deg);
+    color: #ffdd57;
+}

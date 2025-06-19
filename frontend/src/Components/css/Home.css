@@ -1,0 +1,316 @@
+/* ========================= */
+/*         General           */
+/* ========================= */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+/* ========================= */
+/*  Home Container & Video  */
+/* ========================= */
+.home-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Background Video */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* ========================= */
+/*         Hero Text         */
+/* ========================= */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: 40px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Middle Section */
+.middle-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+/* Button */
+.hero-btn {
+    background: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.hero-btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/*       Search Bar          */
+/* ========================= */
+.search-bar {
+    background: white;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Search Input Sections */
+.search-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 15px;
+    flex: 1;
+}
+
+.search-option input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #555;
+    background: transparent;
+    width: 100%;
+}
+
+.search-option:not(:last-child) {
+    border-right: 1px solid #ddd;
+}
+
+/* Search Button */
+.search-btn {
+    background: #007bff;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+/* ========================= */
+/*   New Section Styling     */
+/* ========================= */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    background: #f8f9fa;
+}
+
+/* Best Destinations */
+.best-destinations {
+    width: 70%;
+    text-align: center;
+}
+
+.best-destinations h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.destinations-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.destination-card:hover {
+    transform: scale(1.05);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.destination-card p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px;
+    color: #333;
+}
+
+/* ========================= */
+/*  Currency Exchange Sidebar */
+/* ========================= */
+.exchange-rate-sidebar {
+    width: 25%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: left;
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+}
+
+/* Scrolling Effect */
+.exchange-rate-list {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.exchange-rate-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: scrollRates 6s linear infinite;
+}
+
+@keyframes scrollRates {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* Individual currency item */
+.exchange-rate-list li {
+    font-size: 1rem;
+    padding: 5px 0;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .best-destinations {
+        width: 100%;
+    }
+
+    .exchange-rate-sidebar {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .search-option {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .search-btn {
+        margin-top: 10px;
+    }
+
+    .destinations-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destination-card {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .info-section {
+        padding: 20px;
+    }
+
+    .exchange-rate-sidebar {
+        width: 100%;
+    }
+}

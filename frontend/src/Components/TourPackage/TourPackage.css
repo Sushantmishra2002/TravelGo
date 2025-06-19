@@ -1,0 +1,92 @@
+.tour-container {
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+.tour-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tour Grid */
+.tour-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Tour Card */
+.tour-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tour-card:hover {
+    transform: scale(1.05);
+}
+
+.tour-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.tour-name {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.tour-duration {
+    color: #777;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.tour-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.tour-facilities {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.tour-icon {
+    font-size: 1.2rem;
+    color: #f76c6c;
+}
+
+.tour-price {
+    font-size: 1.2rem;
+    color: #28a745;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.book-now {
+    background: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.book-now:hover {
+    background: #e94e4b;
+}

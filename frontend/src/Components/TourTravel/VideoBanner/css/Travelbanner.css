@@ -1,0 +1,116 @@
+/* TravelBanner.css */
+
+.banner-container {
+    position: relative;
+ 
+    height: 70vh; /* Increased from 50vh to 65vh */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  
+  /* Gradient overlay to enhance contrast */
+  .banner-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.3)
+    );
+    z-index: 1;
+  }
+  
+  /* Video container */
+  .travelvideo-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  /* Background video styling */
+  .video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Ensures full visibility */
+    background-color: black;
+    filter: brightness(1.05) contrast(1.1);
+    opacity: 1;
+    image-rendering: auto;
+    transition: transform 10s ease-in-out;
+    animation: zoomInOut 30s infinite alternate;
+  }
+  
+  /* Zoom animation */
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  /* Discount badge styling */
+  .discount-badge {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+   
+    color: white;
+    padding: 20px 25px;
+    z-index: 2;
+    text-align: center;
+    border-radius: 12px;
+   
+    backdrop-filter: blur(8px); /* glassmorphic effect */
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  
+  
+  .discount-badge h2 {
+    font-size: 2.5rem;
+    margin: 5px 0;
+    color: #e4dfdf;
+  }
+  
+  .discount-badge span {
+    font-size: 1.2rem;
+  }
+  
+  .booking-now {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(255, 126, 95, 0.3);
+}
+
+.booking-now:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(255, 126, 95, 0.4);
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+}

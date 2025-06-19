@@ -1,0 +1,105 @@
+.exclusive-offer-packages {
+  padding: 40px 0;
+}
+
+.exclusive-offer-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.tour-list {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  justify-content: flex-start; /* Align items at the start of the row */
+  gap: 24px;
+  padding: 20px;
+  background: #f9fafb;
+  overflow-x: auto; /* Enable horizontal scrolling if necessary */
+}
+
+.tour-card {
+  width: 320px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+}
+
+.tour-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  border-color: #c7d2fe;
+}
+
+.tour-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.tour-content {
+  padding: 16px 20px;
+}
+
+.tour-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.rating-badge {
+  background-color: #1e3a8a;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.reviews {
+  color: #1e40af;
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
+.tour-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.tour-location {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.tour-highlights {
+  list-style: disc;
+  padding-left: 20px;
+  color: #4b5563;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.tour-highlights li {
+  margin-bottom: 4px;
+}
+
+.tour-price {
+  text-align: right;
+  font-size: 1.1rem;
+  color: #1e3a8a;
+  font-weight: bold;
+}

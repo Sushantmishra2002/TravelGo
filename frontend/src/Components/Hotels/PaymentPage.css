@@ -1,0 +1,85 @@
+.payment-page {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .payment-summary p {
+    margin: 8px 0;
+    font-size: 16px;
+  }
+  
+  .payment-methods {
+    margin: 20px 0;
+  }
+  
+  .method-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .method-btn {
+    padding: 10px 16px;
+    background-color: rgb(255, 28, 153);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .method-btn:hover {
+    background-color: #4caf50;
+    
+    transform: scale(1.05);
+  }
+  
+  .method-btn.selected {
+    background-color: #4caf50;
+   
+    border-color: #388e3c;
+  }
+  
+  .payment-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .payment-form label {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  
+  .payment-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .pay-btn {
+    padding: 12px;
+    background-color: #007bff;
+    color: rgb(40, 22, 22);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .pay-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.03);
+  }
+  

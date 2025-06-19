@@ -1,0 +1,156 @@
+/* Container with reduced height */
+.relative {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Adjusted height */
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Video Container */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.45) contrast(1.05);
+}
+
+/* Text Overlay Container - Centered */
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  padding: 28px 24px;
+  border-radius: 14px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(246, 245, 245, 0.2);
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+/* Headline Style */
+.text-container h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.25;
+  color: #f9f8f9;
+}
+
+.text-container h1 span {
+  color: #ffc107;
+  text-shadow: 0 0 6px rgba(255, 193, 7, 0.5);
+}
+
+/* Paragraph */
+.text-container p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: #ddd;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.button-primary,
+.button-secondary {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  min-width: 120px;
+}
+
+/* Gradient Primary Button */
+.button-primary {
+  background: linear-gradient(to right, #ff6f00, #ffa000);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 111, 0, 0.3);
+}
+
+.button-primary:hover {
+  background: linear-gradient(to right, #ff8f00, #ffc107);
+  box-shadow: 0 6px 18px rgba(255, 193, 7, 0.4);
+}
+
+/* Glass Secondary Button */
+.button-secondary {
+  background: rgba(221, 208, 208, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.button-secondary:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .relative {
+    height: 60vh;
+  }
+
+  .text-container {
+    max-width: 90%;
+    padding: 20px 16px;
+  }
+
+  .text-container h1 {
+    font-size: 24px;
+  }
+
+  .text-container p {
+    font-size: 14px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-primary,
+  .button-secondary {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+}

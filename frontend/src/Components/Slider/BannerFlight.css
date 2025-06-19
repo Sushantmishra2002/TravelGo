@@ -1,0 +1,122 @@
+/* Main Banner Container */
+.flight-banner {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+}
+
+/* Responsive height for larger screens */
+@media (min-width: 768px) {
+  .flight-banner {
+    height: 320px;
+  }
+}
+
+/* Left Side (Video Section) */
+.flight-video-container {
+  position: relative;
+  width: 45%;
+  height: 100%;
+  overflow: hidden;
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+}
+
+.flight-video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Side (Text & Buttons) */
+.flight-text-container {
+  width: 55%;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+.flight-text-container h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+@media (min-width: 768px) {
+  .flight-text-container h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.flight-text-container span {
+  color: red;
+}
+
+.flight-text-container p {
+  color: #666;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+/* Buttons */
+.flight-button-group {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.flight-button-primary {
+  background-color: white;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.flight-button-primary:hover {
+  background-color: #e0f0ff;
+}
+
+.flight-button-secondary {
+  background-color: red;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.flight-button-secondary:hover {
+  background-color: darkred;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .flight-banner {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .flight-video-container {
+    width: 100%;
+    height: 180px;
+    border-radius: 0;
+  }
+
+  .flight-text-container {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .flight-button-group {
+    justify-content: center;
+  }
+}
